@@ -4,7 +4,7 @@
 - [Pre-requisites](#pre-requisites)
 - [Installation and configuration](#Installation-and-configuration)
 - [Result](#Result)
-- [Node Exporter](#Node Exporter)
+- [NodeExporter](#Node Exporter)
 
 
 # Introduction
