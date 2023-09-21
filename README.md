@@ -1,5 +1,5 @@
 # Terraform - prometheus - Grafana
-# Provision and deploy the Prometheus and Grafana on AWS using Terraform and Docker.
+## Provision and deploy the Prometheus and Grafana on AWS using Terraform and Docker.
 - [Introduction](#Introduction)
 - [Pre-requisites](#pre-requisites)
 - [Installation and configuration](#Installation-and-configuration)
@@ -7,17 +7,17 @@
 - [NodeExporter](#Node Exporter)
 
 
-# Introduction
+## Introduction
 In this post, we will deploy a prometheus docker to AWS. We will use Terraform to provision a series of Elastic Cloud Compute (EC2) instances.
 The instances will be built from a basic ubuntu 18.04 ami. We will install the docker and deploy the prometheus.
 The Prometheus will discover the ec2 instance in the singapore region(If you wish to change please add the respective region in yml file)
 
-# Pre-requisites
+## Pre-requisites
 Before we get started installing the Prometheus stack on AWS. 
 * Ensure you install the latest version of [terraform](https://learn.hashicorp.com/terraform/getting-started/install.html) is installed
 * Create the IAM access in AWS to provision the ec2 instance,vpc,subnet,internet gateway,security group,iam.
 
-# Installation and configuration
+## Installation and configuration
 Clone the project locally to your Docker host.
 
 If you would like to change which targets should be monitored or make configuration changes edit the prometheus.yml file. 
@@ -35,7 +35,7 @@ In this project we used the following provision.
 
 In this project the prometheus will discover the ec2 instance across the singapore region.
 
-# Steps to run the provisioning in terraform
+## Steps to run the provisioning in terraform
 1. Clone the repo
 ```
 git clone https://github.com/ahamedyaserarafath/terraform_prometheus.git
@@ -64,7 +64,7 @@ Grafana_URL = http://54.169.85.67:3000
 Prometheus_URL = http://54.169.85.67:9090
 ```
 
-# Node Exporter
+## Node Exporter
 Now Grafana and prometheus is up and running. Now its time to run the node-exporter in the ec2 nodes which will the send the metrics to prometheus.
 
 ```
